@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<div class="formulario">
+    <h1>Cadastro</h1>
+
+    <form method="POST" action="{% url 'cadastro' %}">
+        {% csrf_token %}
+        <div>
+            <label>Nome:</label><br>
+            <input type="text" name="nome" value="{{request.POST.nome}}"><br>
+        </div>
+        <div>
+            <label>Sobrenome:</label><br>
+            <input type="text" name="sobrenome" value="{{request.POST.sobrenome}}"><br>
+        </div>
+        <div>
+            <label>Email:</label><br>
+            <input type="email" name="email" value="{{request.POST.email}}"><br>
+        </div>
+        <div>
+            <label>Nome de Usuário:</label><br>
+            <input type="text" name="usuario" value="{{request.POST.usuario}}"><br>
+        </div>
+
+        <div>
+            <label>Senha:</label><br>
+            <input type="password" name="senha"><br>
+        </div>
+        <div>
+            <label>Confirme a Senha:</label><br>
+            <input type="password" name="senha2"><br>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+</div>
+{% endblock %}

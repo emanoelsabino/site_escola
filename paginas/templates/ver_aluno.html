@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Alunos{% endblock %}
+
+{%block conteudo%}
+<h1>Descrição do Aluno</h1>
+<hr>
+<div class="descricao">
+    <dl>
+        <dt>{{ aluno.nome }}</dt>
+        <dd>Id: {{ aluno.id }}</dd>
+        <dd>Turma: {{ aluno.turma }}</dd>
+
+
+        <dt>Mãe:</dt>
+        <dd>Nome:{{ aluno.nome_mae }}</dd>
+        <dd>Contato: {{ aluno.contato_mae }}</dd>
+
+        <dt>Pai:</dt>
+        <dd>Nome: {{ aluno.nome_pai }}</dd>
+        <dd>Contato: {{ aluno.contato_pai }}</dd>
+    </dl>
+</div>
+
+{%endblock%}

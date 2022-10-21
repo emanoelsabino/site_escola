@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Professor{% endblock %}
+
+{%block conteudo%}
+<h1>Descrição do Professor</h1>
+<hr>
+<div class="descricao">
+    <dl>
+        <dt>{{ professor.nome }}</dt>
+        <dd>Id: {{ professor.id }}</dd>
+        <dd>Turma: {{ professor.turma }}</dd>
+    </dl>
+</div>
+{%endblock%}

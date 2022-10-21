@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Alunos{% endblock %}
+
+{%block conteudo%}
+<h1>Relação dos Alunos</h1>
+<hr>
+<div>
+    <table class="tabela">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Turma</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for aluno in alunos %}
+            <tr>
+                <td>
+                    <a href="{% url 'ver_aluno' aluno.id %}">{{ aluno.nome }}</a>
+                </td>
+                <td>{{ aluno.turma }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<nav class="paginacao">
+    {% for pagina in alunos.paginator.page_range %}
+        {% if alunos.number == pagina %}
+            <a href="?p={{ pagina }}" style="background-color: rgb(170, 170, 255); font-weight: bold;">{{ pagina }}</a>
+        {% else %}
+            <a href="?p={{ pagina }}">{{ pagina }}</a>
+        {% endif %}
+    {%endfor%}
+</nav>
+{%endblock%}

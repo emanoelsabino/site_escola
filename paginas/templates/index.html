@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{%block titulo%}Pagina Principal{%endblock%}
+
+{%block conteudo%}
+<div class="bloco1">
+    <h1 style="margin-bottom: 5px">Escola Municipal Sao Sebastião</h1>
+    <h3 style="margin-bottom: 15px">Escola Pública Municipal</h3>
+    <button style="margin-bottom: 25px">Ensino Fundamental | Pré-escola</button>
+
+    <p>
+        <img src="{% static 'img/frente_escola.png' %}" alt="imagem escola">
+    </p>
+
+    <h3>Endereço:</h3>
+    <p>Rua Salvador Cirilo Sales</p>
+    <p>São Sebastião</p>
+    <p>Itajubá - MG</p>
+    <p style="margin-bottom: 10px">CEP: 37502-452</p>
+    <h3 style="margin-bottom: 10px">Fone: (35) 99854-7322</h3>
+    <h3>Email para contato:</h3>
+    <p style="margin-bottom: 10px">emss@itajuba.mg.gov.br</p>
+    <p>Código INEP: 31055484</p>
+    </div>
+{%endblock%}

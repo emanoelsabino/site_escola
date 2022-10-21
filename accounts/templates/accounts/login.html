@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+{% if not user.is_authenticated %}
+<div class="formulario">
+    <h1 style="margin-bottom: 15px;">Login</h1>
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div>
+            <label>Usuário:</label><br>
+            <input type="text" name="usuario" value="{{request.POST.usuario}}"><br>
+        </div>
+        <div>
+            <label>Senha:</label><br>
+            <input type="password" name="senha"><br>
+        </div>
+
+        <button type="submit">Entrar</button>
+
+    </form>
+</div>
+
+{% else %}
+<div style="text-align: center; padding-top: 7%;">
+<h1 style="padding: 10px">Olá, {{ user.first_name }}, você já está logado!</h1>
+<a href="{% url 'logout' %}" style="color: red; border: 2px solid red; padding: 5px">CLIQUE AQUI PARA SAIR</a>
+</div>
+{% endif %}
+{% endblock %}

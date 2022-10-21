@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Professores{% endblock %}
+
+{%block conteudo%}
+<div>
+    <h1>Relação dos Professores</h1>
+    <hr>
+    <table class="tabela">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Turma</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for professor in professores %}
+            <tr>
+                <td>
+                    <a href="{% url 'ver_professor' professor.id %}">{{ professor.nome }}</a>
+                </td>
+                <td>{{ professor.turma }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<nav class="paginacao">
+    {% for pagina in professores.paginator.page_range %}
+        {% if professores.number == pagina %}
+            <a href="?p={{ pagina }}" style="background-color: rgb(170, 170, 255); font-weight: bold;">{{ pagina }}</a>
+        {% else %}
+            <a href="?p={{ pagina }}">{{ pagina }}</a>
+        {% endif %}
+    {%endfor%}
+</nav>
+{%endblock%}
