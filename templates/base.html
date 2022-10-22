@@ -11,34 +11,35 @@
 
 </head>
 <body>
-    <div class="menu">
+    <nav class="menu">
         {% if user.is_authenticated %}
-        <nav>
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'professores' %}">Professores</a>
-            <a href="{% url 'alunos' %}">Alunos</a>
-            <a href="{% url 'cadastro' %}">Cadastrar Usuário</a>
-            <a href="{% url 'cad_aluno' %}">Cadastrar Aluno(a)</a>
-            <a href="{% url 'cad_professor' %}">Cadastrar Professor(a)</a>
-        </nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'professores' %}">Professores</a></li>
+            <li><a href="{% url 'alunos' %}">Alunos</a></li>
+            <li><a href="{% url 'cadastro' %}">Cadastrar Usuário</a></li>
+            <li><a href="{% url 'cad_aluno' %}">Cadastrar Aluno(a)</a></li>
+            <li><a href="{% url 'cad_professor' %}">Cadastrar Professor(a)</a></li>
+        </ul>
         {% endif %}
 
-        <a href="{% url 'index' %}">
-        <img class="logo" src="{% static 'img/logo_prefeitura.png' %}" alt=""></a>
-        <h1 style="text-align: left; padding-left: 130px;">Escola Municipal São Sebastião</h1>
-        <h3 style="text-align: left; padding-left: 130px;">Itajubá-MG</h3>
-
-        {% if user.is_authenticated %}
-        <a href="{% url 'index' %}" style="padding: 0px;">Olá, {{ user.first_name }} {{ user.last_name }}</a>
-        <a href="{% url 'logout' %}" style="padding-right: 20px; color: red;">SAIR</a>
-        {% endif %}
-        {% if not user.is_authenticated %}
-        <nav>
-            <a href="{% url 'login' %}">Faça Seu Login!</a>
-        </nav>
-        {% endif %}
-
-    </div>
+    </nav>
+    <header>
+        <div id="autenticado">
+            {% if user.is_authenticated %}
+                <a href="{% url 'index' %}" style="padding: 0px;">Olá, {{ user.first_name }} {{ user.last_name }}</a>
+                <a href="{% url 'logout' %}" style="padding-right: 20px; color: red;">SAIR</a>
+            {% endif %}
+            {% if not user.is_authenticated %}
+                <nav class="menu">
+                    <ul>
+                        <li>Escola Municipal São Sebastião</li>
+                        <li><a href="{% url 'login' %}">Faça Seu Login!</a></li>
+                    </ul>
+                </nav>
+            {% endif %}
+        </div>
+    </header>
 
     <main>
         {% if messages %}
