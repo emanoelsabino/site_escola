@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+# teste
+
 from pathlib import Path
 from django.contrib.messages import constants
 
@@ -24,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-r(uj35!ks8g#lbkcxfvw)z#4awy+_98irt5f4o6fgmc$c7n)9f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['34.151.247.48']
 
 
 # Application definition
@@ -78,8 +80,12 @@ WSGI_APPLICATION = 'projeto.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sitedjango',
+	'HOST': '127.0.0.1',
+	'PORT': '3306',
+	'USER': 'cursopython',
+	'PASSWORD': 'curs0Pyth0n@169',
     }
 }
 
@@ -119,6 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = 'static/'
 
 # configurando menssagem
 MESSAGE_TAGS = {

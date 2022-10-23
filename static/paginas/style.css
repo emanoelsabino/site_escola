@@ -1,0 +1,192 @@
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+.menu {
+    background-color: rgb(255, 255, 131);
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.menu ul li {
+    display: inline-block;
+}
+.menu ul li a {
+    display: block;
+    color: black;
+    padding: 30px 10px;
+}
+
+#titulo h1, h3{
+    padding-bottom: 5px;
+}
+
+#autenticado{
+    text-align: right;
+    background-color: rgb(255, 255, 131);
+}
+#autenticado a{
+    color: black;
+    text-align: right;
+}
+
+div.descricao{
+    padding: 30px;
+}
+div.descricao dt{
+    font-size: 2em;
+    padding-top: 10px;
+}
+div.descricao dd{
+    font-size: 1.2em;
+}
+
+body{
+    background-color: white;
+}
+body table.tabela{
+    border-top: 2px solid rgb(189, 189, 189);
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+body table.tabela, th, td{
+    border-bottom: 2px solid rgb(189, 189, 189);
+    text-align: left;
+    padding: 10px;
+}
+body thead{
+    background-color: rgb(189, 189, 189);
+}
+
+
+main{
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.596);
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 15px;
+    min-height: 500px;
+}
+div.bloco1{
+    background-color: rgb(255, 255, 255);
+    min-height: 150px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+#i_frente{
+    margin: auto;
+    display: block;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 55px;
+}
+
+nav.paginacao{
+    margin-top: 30px;
+}
+nav.paginacao a{
+    padding: 9px;
+    border: 1px solid black;
+    color: black;
+}
+
+
+footer{
+    background-color: rgb(255, 255, 131);
+    font-size: 0.8em;
+    font-style: italic;
+    min-height: 150px;
+}
+footer div{
+    height: 130px;
+}
+footer p{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.849);
+}
+
+div.footer img{
+    width: 200px;
+    position: absolute;
+    right: 0;
+}
+
+div.formulario{
+    border: 3px solid rgba(0, 0, 0, 0.637);
+    max-width: 500px;
+    margin: auto;
+    padding: 15px;
+    background-color: rgba(255, 255, 159, 0.87);
+    border-radius: 20px;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.726);
+}
+div.formulario input{
+    width: 90%; 
+    margin: 5px;
+    padding: 10px;
+}
+div.formulario label{
+    padding: 5px;
+    font-weight: bold;
+}
+div.formulario button{
+    margin: 5px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(209, 209, 209);
+    transition-duration: 0.4s;
+}
+div.formulario button:hover{
+    background-color: rgb(85, 85, 85);
+    color: white;
+    font-weight: bold;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.658);
+}
+div.formulario h1{
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.664);
+}
+
+div.message{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgba(241, 241, 241, 0.781);
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px black;
+}
+div.message-erro{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgba(255, 0, 0, 0.781);
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+div.message-sucesso{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgba(9, 255, 0, 0.781);
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
