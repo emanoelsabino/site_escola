@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-r(uj35!ks8g#lbkcxfvw)z#4awy+_98irt5f4o6fgmc$c7n)9f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['34.151.247.48']
+ALLOWED_HOSTS = ['34.151.247.48', 'emanoelsabino.ddns.net']
 
 
 # Application definition
@@ -142,3 +142,8 @@ try:
     from .local_settings import *
 except ImportError:
     pass
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
