@@ -23,22 +23,19 @@
             <li><a href="{% url 'cad_aluno' %}">Cadastrar Aluno(a)</a></li>
             <li><a href="{% url 'cad_professor' %}">Cadastrar Professor(a)</a></li>
         </ul>
+        {% else %}
+        <ul>
+            <li>Escola Municipal São Sebastião</li>
+            <li><a href="{% url 'login' %}">Faça Seu Login!</a></li>
+        </ul>
         {% endif %}
-
     </nav>
+
     <header>
         <div id="autenticado">
             {% if user.is_authenticated %}
                 <a href="{% url 'index' %}" style="padding: 0px;">Olá, {{ user.first_name }} {{ user.last_name }}</a>
                 <a href="{% url 'logout' %}" style="padding-right: 20px; color: red;">SAIR</a>
-            {% endif %}
-            {% if not user.is_authenticated %}
-                <nav class="menu">
-                    <ul>
-                        <li>Escola Municipal São Sebastião</li>
-                        <li><a href="{% url 'login' %}">Faça Seu Login!</a></li>
-                    </ul>
-                </nav>
             {% endif %}
         </div>
     </header>
