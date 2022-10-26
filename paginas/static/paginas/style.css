@@ -39,6 +39,12 @@
     left: 0;
 }
 
+@media only screen and (max-width: 860px){
+    #logo{
+        display: none;
+    }
+}
+
 #titulo h1, h3{
     padding-bottom: 5px;
 }
