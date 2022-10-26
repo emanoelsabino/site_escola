@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{%block titulo%}{%endblock%}</title>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
 
     <link rel="stylesheet" href="{% static 'paginas/style.css' %}">
 
 </head>
 <body>
     <nav class="menu">
+        <img id="logo" src="{% static 'img/favicon.ico' %}" alt="logo img">
         {% if user.is_authenticated %}
         <ul>
             <li><a href="{% url 'index' %}">Home</a></li>
