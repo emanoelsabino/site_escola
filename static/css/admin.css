@@ -1,4 +1,4 @@
-/* Variáveis */
+/* Variáveis
 :root{
     --cor1: rgb(209, 209, 0);
     --cor2: black;
@@ -7,51 +7,56 @@
     --cor5: rgba(0, 0, 0, 0.658);
     --cor6: rgba(255, 0, 0, 0.781);
     --cor7: rgba(9, 255, 0, 0.781);
-}
+}*/
+
+/*
+ALTERAR: 4169E1 -> Cor do topo
+ALTERAR: 1E90FF -> Cor dos links e cabeçalhos
+*/
 
 #branding h1,
 #branding h1 a,
 #branding h1 a:link,
 #branding h1 a:visited {
-    color: var(--cor2);
+    color: #FFFFFF;
 }
 
 #header {
-    background: var(--cor1);
-    color: var(--cor2);
+    background: #4169E1;
+    color: #FFFFFF;
 }
 
 #user-tools a:focus, #user-tools a:hover {
-    border-bottom-color: var(--cor2);
-    color: var(--cor2);
+    border-bottom-color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 a:link, a:visited {
-    color: var(--cor2);
+    color: #1E90FF;
 }
 
 .module h2, .module caption, .inline-group h2 {
-    background: var(--cor2);
-    color: var(--cor2);
+    background: #1E90FF;
+    color: #FFFFFF;
 }
 
 div.breadcrumbs {
-    background: var(--cor2);
-    color: var(--cor2);
+    background: #1E90FF;
+    color: #FFFFFF;
 }
 
 .paginator a:link, .paginator a:visited {
-    background: var(--cor2) !important;
-    color: var(--cor2);
+    background: #1E90FF !important;
+    color: #FFFFFF;
 }
 
 .paginator a:hover {
-    background: var(--cor1) !important;
-    color: var(--cor2);
+    background: #4169E1 !important;
+    color: #FFFFFF;
 }
 
 .button.default, input[type=submit].default, .submit-row input.default {
-    background: var(--cor2);
+    background: #1E90FF;
 }
 
 .button.default:active,
@@ -60,16 +65,16 @@ input[type=submit].default:active,
 input[type=submit].default:focus,
 .button.default:hover,
 input[type=submit].default:hover {
-    background: var(--cor1);
+    background: #4169E1;
 }
 
 .object-tools a:focus, .object-tools a:hover {
-    background-color: var(--cor2);
+    background-color: #1E90FF;
 }
 
 .button, input[type=submit], input[type=button], .submit-row input, a.button {
-    background: var(--cor1);
-    color: var(--cor2);
+    background: #4169E1;
+    color: #FFFFFF;
 }
 .button:active,
 input[type=submit]:active,
@@ -80,28 +85,28 @@ input[type=button]:focus,
 .button:hover,
 input[type=submit]:hover,
 input[type=button]:hover {
-    background-color: var(--cor2);
+    background-color: #1E90FF;
 }
 
 #changelist-filter li.selected a {
-    color: var(--cor2) !important;
+    color: #1E90FF !important;
 }
 
 #changelist-filter a:focus,
 #changelist-filter a:hover,
 #changelist-filter li.selected a:focus,
 #changelist-filter li.selected a:hover {
-    color: var(--cor2) !important;
+    color: #4169E1 !important;
 }
 
 .selector-chosen h2 {
-    background: var(--cor2) !important;
-    color: var(--cor2);
+    background: #1E90FF !important;
+    color: #FFFFFF;
 }
 
 a.active.selector-chooseall:focus,
 a.active.selector-clearall:focus,
 a.active.selector-chooseall:hover,
 a.active.selector-clearall:hover {
-    color: var(--cor2) !important;
+    color: #1E90FF !important;
 }

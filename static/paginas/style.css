@@ -1,12 +1,13 @@
 /* Variáveis */
 :root{
-    --cor1: rgb(255, 255, 131);
+    --cor1: #1E90FF;
     --cor2: black;
     --cor3: white;
     --cor4: rgb(189, 189, 189);
     --cor5: rgba(0, 0, 0, 0.658);
     --cor6: rgba(255, 0, 0, 0.781);
     --cor7: rgba(9, 255, 0, 0.781);
+    --cor8: #87CEEB;
 }
  
 *{
@@ -29,6 +30,13 @@
     display: block;
     color: var(--cor2);
     padding: 30px 10px;
+}
+#logo{
+    position: absolute;
+    width: 80px;
+    box-align: left;
+    top: 0;
+    left: 0;
 }
 
 #titulo h1, h3{
@@ -135,7 +143,7 @@ div.formulario{
     max-width: 500px;
     margin: auto;
     padding: 15px;
-    background-color: var(--cor1);
+    background-color: var(--cor8);
     border-radius: 20px;
     box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.726);
 }
@@ -153,14 +161,14 @@ div.formulario button{
     width: 100px;
     padding: 10px;
     border-radius: 10px;
-    background-color: var(--cor4);
+    background-color: var(--cor1);
     transition-duration: 0.4s;
 }
 div.formulario button:hover{
-    background-color: var(--cor2);
-    color: var(--cor3);
+    background-color: var(--cor1);
+    color: var(--cor2);
     font-weight: bold;
-    box-shadow: 1px 1px 10px 1px var(--cor5);
+    box-shadow: 1px 1px 10px 1px var(--cor1);
 }
 div.formulario h1{
     text-align: center;
@@ -171,7 +179,7 @@ div.message{
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
-    background-color: var(--cor4);
+    background-color: var(--cor1);
     padding: 10px;
     width: 40%;
     margin: auto;
