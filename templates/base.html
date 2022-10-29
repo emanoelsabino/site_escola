@@ -21,9 +21,15 @@
             <li><a href="{% url 'index' %}">Home</a></li>
             <li><a href="{% url 'professores' %}">Professores</a></li>
             <li><a href="{% url 'alunos' %}">Alunos</a></li>
+            {% for group in user.groups.all %}
+            {% if group.name == 'administrador' %}
+            <li><a href="{% url 'cad_aluno' %}">Cadastrar Aluno</a></li>
+            <li><a href="{% url 'cad_professor' %}">Cadastrar Professor</a></li>
             <li><a href="{% url 'cadastro' %}">Cadastrar Usuário</a></li>
-            <li><a href="{% url 'cad_aluno' %}">Cadastrar Aluno(a)</a></li>
-            <li><a href="{% url 'cad_professor' %}">Cadastrar Professor(a)</a></li>
+            <li><a href="/admin">Área do Administrador</a></li>
+            {% endif %}
+            {% endfor %}
+
         </ul>
         {% else %}
         <ul>
