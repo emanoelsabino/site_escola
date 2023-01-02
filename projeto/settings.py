@@ -18,7 +18,6 @@ from django.contrib.messages import constants
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -29,7 +28,6 @@ SECRET_KEY = 'django-insecure-r(uj35!ks8g#lbkcxfvw)z#4awy+_98irt5f4o6fgmc$c7n)9f
 DEBUG = False
 
 ALLOWED_HOSTS = ['34.151.247.48', 'escolasaosebastiao.ddns.net']
-
 
 # Application definition
 
@@ -74,7 +72,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'projeto.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -82,13 +79,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sitedjango',
-	'HOST': '127.0.0.1',
-	'PORT': '3306',
-	'USER': 'cursopython',
-	'PASSWORD': 'curs0Pyth0n@169',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'USER': 'cursopython',
+        'PASSWORD': 'curs0Pyth0n@169',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -108,7 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -119,7 +114,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
