@@ -11,12 +11,16 @@
 }
  
 *{
-    margin: 10px;
+    margin: 0;
     padding: 0;
     font-family: Arial;
 }
 dl, ol, ul{
     margin-bottom: 0px;
+}
+
+body{
+    background-color: yellow;
 }
 
 .menu {
@@ -25,15 +29,19 @@ dl, ol, ul{
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    min-height: 80px;
 }
-.menu ul li {
+.menu a {
     display: inline-block;
-}
-.menu ul li a {
-    display: block;
     color: var(--cor2);
-    padding: 30px 10px;
+    padding: 10px 10px;
 }
+.menu a:hover{
+    font-weight: bold;
+    background-color: var(--cor8);
+    border-radius: 10px;
+}
+
 #logo{
     position: absolute;
     width: 80px;
@@ -42,11 +50,38 @@ dl, ol, ul{
     left: 0;
 }
 
-@media only screen and (max-width: 860px){
-    #logo{
+#btn-mobile{
+    position: absolute;
+    display: none;
+    box-align: left;
+    top: 0;
+    right: 10px;
+}
+@media (max-width: 1000px) {
+    #btn-mobile{
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+        background-color: var(--cor1);
+    }
+    #menu a{
         display: none;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+    }
+    #menu{
+        position: absolute;
+        width: 200px;
+        background-color: var(--cor1);
+        right: 50px;
+        z-index: 999;
+    }
+
+    #nav.active #menu a{
+        display: block;
     }
 }
+
 
 #titulo h1, h3{
     padding-bottom: 5px;
@@ -96,12 +131,12 @@ main{
     background-color: var(--cor3);
     box-shadow: 2px 2px 10px var(--cor5);
     border-radius: 10px;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
     margin-top: 15px;
     margin-bottom: 5px;
     padding: 15px;
-    min-height: 500px;
+    min-height: 88vh;
 }
 div.bloco1{
     background-color: var(--cor3);

@@ -14,23 +14,25 @@
 
 </head>
 <body>
-    <nav class="menu">
+    <nav class="menu" id="nav">
+        <button id="btn-mobile">
+            <img width="35px" src="{% static 'img/icone-menu.png' %}" alt="">
+        </button>
         <img id="logo" src="{% static 'img/favicon.ico' %}" alt="logo img">
         {% if user.is_authenticated %}
-        <ul>
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'professores' %}">Professores</a></li>
-            <li><a href="{% url 'alunos' %}">Alunos</a></li>
+        <div id="menu">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'professores' %}">Professores</a>
+            <a href="{% url 'alunos' %}">Alunos</a>
             {% for group in user.groups.all %}
             {% if group.name == 'administrador' %}
-            <li><a href="{% url 'cad_aluno' %}">Cadastrar Aluno</a></li>
-            <li><a href="{% url 'cad_professor' %}">Cadastrar Professor</a></li>
-            <li><a href="{% url 'cadastro' %}">Cadastrar Usuário</a></li>
-            <li><a href="/admin">Área do Administrador</a></li>
+            <a href="{% url 'cad_aluno' %}">Cadastrar Aluno</a>
+            <a href="{% url 'cad_professor' %}">Cadastrar Professor</a>
+            <a href="{% url 'cadastro' %}">Cadastrar Usuário</a>
+            <a href="/admin">Área do Administrador</a>
             {% endif %}
             {% endfor %}
-
-        </ul>
+        </div>
         {% else %}
         <ul>
             <li>Escola Municipal São Sebastião</li>
@@ -62,8 +64,19 @@
         <div class="footer">
             <img src="{% static 'img/img_itajuba.png' %}" alt="">
         </div>
-        <p>&copy; Desenvolvido por Emanoel Sabino</p>
+        <p>Desenvolvido por Emanoel Sabino (Back-End) e Diego Almeida (Front-End)</p>
     </footer>
+
+    <script>
+        const btnMobile = document.getElementById('btn-mobile');
+
+        function toggleMenu() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+
+        btnMobile.addEventListener('click', toggleMenu);
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
