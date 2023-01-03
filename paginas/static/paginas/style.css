@@ -73,7 +73,7 @@ body{
         position: absolute;
         width: 200px;
         background-color: var(--cor1);
-        right: 50px;
+        right: 60px;
         z-index: 999;
     }
 
@@ -172,6 +172,8 @@ footer div{
     height: 130px;
 }
 footer p{
+    margin: 0px;
+    padding-bottom: 5px;
     text-align: center;
     color: rgba(0, 0, 0, 0.849);
 }
